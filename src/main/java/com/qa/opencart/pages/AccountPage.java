@@ -32,7 +32,7 @@ public class AccountPage {
 		public String getAccPageTitle()
 		{
 			String pageTitle = driver.getTitle();
-			System.out.println("Page title is " + pageTitle);
+			System.out.println("Page title is : " + pageTitle);
 			return pageTitle;
 		}
 		
