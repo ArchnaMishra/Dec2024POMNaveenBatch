@@ -1,78 +1,303 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-01T10:06:43 IST" name="Opencart App Test Regression Suite" finished-at="2025-05-01T10:06:50 IST" duration-ms="6841">
+  <suite started-at="2025-05-25T07:01:32 IST" name="Opencart App Test Regression Suite" finished-at="2025-05-25T07:01:44 IST" duration-ms="11907">
     <groups>
     </groups>
-    <test started-at="2025-05-01T10:06:43 IST" name="Login Page Test_chrome" finished-at="2025-05-01T10:06:50 IST" duration-ms="6841">
-      <class name="com.qa.opencart.tests.LoginPageTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.qa.opencart.tests.LoginPageTest@4b1ec694]" started-at="2025-05-01T10:06:43 IST" name="setUp" finished-at="2025-05-01T10:06:47 IST" duration-ms="4009" status="PASS">
+    <test started-at="2025-05-25T07:01:32 IST" name="Account Page Test_chrome" finished-at="2025-05-25T07:01:39 IST" duration-ms="6947">
+      <class name="com.qa.opencart.tests.AccountPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.AccountPageTest@634ff56]" started-at="2025-05-25T07:01:32 IST" name="setUp" finished-at="2025-05-25T07:01:37 IST" duration-ms="5360" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Account Page Test]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="pageTitleTest()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@4b1ec694]" started-at="2025-05-01T10:06:47 IST" name="pageTitleTest" description="checking login title" finished-at="2025-05-01T10:06:47 IST" duration-ms="101" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Account Login11] but found [Account Login]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Account Login11] but found [Account Login]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at com.qa.opencart.tests.LoginPageTest.pageTitleTest(LoginPageTest.java:32)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method is-config="true" signature="accPageSetup()[pri:0, instance:com.qa.opencart.tests.AccountPageTest@634ff56]" started-at="2025-05-25T07:01:37 IST" name="accPageSetup" finished-at="2025-05-25T07:01:38 IST" duration-ms="1021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accPageSetup -->
+        <test-method signature="hearderCountTest()[pri:0, instance:com.qa.opencart.tests.AccountPageTest@634ff56]" started-at="2025-05-25T07:01:38 IST" name="hearderCountTest" finished-at="2025-05-25T07:01:38 IST" duration-ms="362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hearderCountTest -->
+        <test-method signature="pageTitleTest()[pri:0, instance:com.qa.opencart.tests.AccountPageTest@634ff56]" started-at="2025-05-25T07:01:38 IST" name="pageTitleTest" finished-at="2025-05-25T07:01:38 IST" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageTitleTest -->
-        <test-method signature="pageUrlTest()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@4b1ec694]" started-at="2025-05-01T10:06:48 IST" name="pageUrlTest" description="checking login page url" finished-at="2025-05-01T10:06:48 IST" duration-ms="12" status="PASS">
+        <test-method signature="pageUrlTest()[pri:0, instance:com.qa.opencart.tests.AccountPageTest@634ff56]" started-at="2025-05-25T07:01:38 IST" name="pageUrlTest" finished-at="2025-05-25T07:01:39 IST" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageUrlTest -->
-        <test-method signature="loginTest()[pri:32767, instance:com.qa.opencart.tests.LoginPageTest@4b1ec694]" started-at="2025-05-01T10:06:48 IST" name="loginTest" finished-at="2025-05-01T10:06:48 IST" duration-ms="846" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.AccountPageTest@634ff56]" started-at="2025-05-25T07:01:39 IST" name="tearDown" finished-at="2025-05-25T07:01:39 IST" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.opencart.tests.AccountPageTest -->
+    </test> <!-- Account Page Test_chrome -->
+    <test started-at="2025-05-25T07:01:32 IST" name="Login Page Test_chrome" finished-at="2025-05-25T07:01:39 IST" duration-ms="7146">
+      <class name="com.qa.opencart.tests.LoginPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.LoginPageTest@64387c17]" started-at="2025-05-25T07:01:32 IST" name="setUp" finished-at="2025-05-25T07:01:37 IST" duration-ms="5294" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[126.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Login Page Test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="pageTitleTest()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@64387c17]" started-at="2025-05-25T07:01:37 IST" name="pageTitleTest" description="checking login title" finished-at="2025-05-25T07:01:37 IST" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageTitleTest -->
+        <test-method signature="pageUrlTest()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@64387c17]" started-at="2025-05-25T07:01:37 IST" name="pageUrlTest" description="checking login page url" finished-at="2025-05-25T07:01:38 IST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageUrlTest -->
+        <test-method signature="loginTest()[pri:32767, instance:com.qa.opencart.tests.LoginPageTest@64387c17]" started-at="2025-05-25T07:01:38 IST" name="loginTest" finished-at="2025-05-25T07:01:39 IST" duration-ms="1144" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@4b1ec694]" started-at="2025-05-01T10:06:48 IST" name="tearDown" finished-at="2025-05-01T10:06:50 IST" duration-ms="1382" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@64387c17]" started-at="2025-05-25T07:01:39 IST" name="tearDown" finished-at="2025-05-25T07:01:39 IST" duration-ms="114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.opencart.tests.LoginPageTest -->
     </test> <!-- Login Page Test_chrome -->
+    <test started-at="2025-05-25T07:01:32 IST" name="Search Page Test_chrome" finished-at="2025-05-25T07:01:39 IST" duration-ms="7322">
+      <class name="com.qa.opencart.tests.SearchTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.SearchTest@58ae402b]" started-at="2025-05-25T07:01:32 IST" name="setUp" finished-at="2025-05-25T07:01:37 IST" duration-ms="4970" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[113.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Search Page Test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="accPageSetup()[pri:0, instance:com.qa.opencart.tests.SearchTest@58ae402b]" started-at="2025-05-25T07:01:37 IST" name="accPageSetup" finished-at="2025-05-25T07:01:38 IST" duration-ms="992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accPageSetup -->
+        <test-method signature="searchTest()[pri:0, instance:com.qa.opencart.tests.SearchTest@58ae402b]" started-at="2025-05-25T07:01:38 IST" name="searchTest" finished-at="2025-05-25T07:01:39 IST" duration-ms="1202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.SearchTest@58ae402b]" started-at="2025-05-25T07:01:39 IST" name="tearDown" finished-at="2025-05-25T07:01:39 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.opencart.tests.SearchTest -->
+    </test> <!-- Search Page Test_chrome -->
+    <test started-at="2025-05-25T07:01:32 IST" name="ProductInfo Page Test_chrome" finished-at="2025-05-25T07:01:44 IST" duration-ms="11907">
+      <class name="com.qa.opencart.tests.ProductInfoTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.ProductInfoTest@1ba467c2]" started-at="2025-05-25T07:01:32 IST" name="setUp" finished-at="2025-05-25T07:01:37 IST" duration-ms="4969" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[113.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ProductInfo Page Test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="productInfoSetup()[pri:0, instance:com.qa.opencart.tests.ProductInfoTest@1ba467c2]" started-at="2025-05-25T07:01:37 IST" name="productInfoSetup" finished-at="2025-05-25T07:01:38 IST" duration-ms="991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productInfoSetup -->
+        <test-method signature="getActualProductDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.ProductInfoTest@1ba467c2]" started-at="2025-05-25T07:01:38 IST" name="getActualProductDetailsTest" data-provider="getproductData" finished-at="2025-05-25T07:01:40 IST" duration-ms="2247" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[macbook]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Macbook Air]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Apple]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Product 17]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Out Of Stock]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[$1,202.00]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[$1,000.00]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getActualProductDetailsTest -->
+        <test-method signature="getActualProductDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.ProductInfoTest@1ba467c2]" started-at="2025-05-25T07:01:40 IST" name="getActualProductDetailsTest" data-provider="getproductData" finished-at="2025-05-25T07:01:42 IST" duration-ms="1751" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[iMac]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iMac]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Apple]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Product 14]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Out Of Stock]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[$122.00]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[$100.00]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getActualProductDetailsTest -->
+        <test-method signature="getActualProductDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.ProductInfoTest@1ba467c2]" started-at="2025-05-25T07:01:42 IST" name="getActualProductDetailsTest" data-provider="getproductData" finished-at="2025-05-25T07:01:43 IST" duration-ms="1724" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[samsung]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Samsung SyncMaster 941BW]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Product 6]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2-3 Days]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[$242.00]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[$200.00]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getActualProductDetailsTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.ProductInfoTest@1ba467c2]" started-at="2025-05-25T07:01:43 IST" name="tearDown" finished-at="2025-05-25T07:01:44 IST" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.opencart.tests.ProductInfoTest -->
+    </test> <!-- ProductInfo Page Test_chrome -->
   </suite> <!-- Opencart App Test Regression Suite -->
 </testng-results>

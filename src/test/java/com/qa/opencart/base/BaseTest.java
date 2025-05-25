@@ -25,14 +25,16 @@ public class BaseTest {
 	
 	public WebDriver driver;
 	
-	@Parameters({"browser"})
+	@Parameters({"browser", "browserversion", "testname"})
 	@BeforeTest
-	public void setUp(String browserName)
+	public void setUp(String browserName, String browserVersion, String testname)
 	{ 
 		prop=df.getProperties();
 		if(browserName!=null)
 		{
 			prop.setProperty("browser", browserName);
+			prop.setProperty("browserversion", browserVersion);
+			prop.setProperty("testname", testname);
 		}
 		
 		driver= df.initDriver(prop);

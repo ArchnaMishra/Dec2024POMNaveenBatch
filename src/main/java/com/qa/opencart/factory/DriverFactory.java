@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
@@ -12,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import com.aventstack.chaintest.plugins.ChainTestListener;
@@ -25,7 +28,7 @@ public class DriverFactory {
 	WebDriver driver;
 	Properties prop;
 	OptionsManager optionsManager;
-	
+
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 
 	public static String highlight;
@@ -37,27 +40,47 @@ public class DriverFactory {
 	 */
 	@Step("init driver with properties: {0}")
 	public WebDriver initDriver(Properties prop) {
-		
 
 		String browserName = prop.getProperty("browser");
 		System.out.println("browser name : " + browserName);
-		ChainTestListener.log("browser name: "+browserName);
+		ChainTestListener.log("browser name: " + browserName);
 		optionsManager = new OptionsManager(prop);
 
 		highlight = prop.getProperty("highlight");
 
 		switch (browserName.toLowerCase().trim()) {
 		case "chrome":
-			tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));			
+			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+				// run on selenium grid
+				initRemoteDriver("chrome");
+			} else {
+				// run on local
+				tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
+			}
+
 			break;
 		case "edge":
-			tlDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));			
+			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+				// run on selenium grid
+				initRemoteDriver("edge");
+			} else {
+				// run on local
+				tlDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
+			}
 			break;
+
 		case "firefox":
-			tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));			
+			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+				// run on selenium grid
+				initRemoteDriver("firefox");
+			} else {
+				// run on local
+				tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
+			}
 			break;
+
 		case "safari":
-			tlDriver.set(new SafariDriver());			
+			tlDriver.set(new SafariDriver());
 			break;
 
 		default:
@@ -70,16 +93,54 @@ public class DriverFactory {
 		getDriver().manage().deleteAllCookies();
 		return getDriver();
 	}
-	
+
+	// run it on remote grid
+	private void initRemoteDriver(String browserName) {
+		switch (browserName) {
+		case "chrome":
+			try {
+				tlDriver.set(
+						new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.getChromeOptions()));
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
+
+			break;
+
+		case "edge":
+			try {
+				tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.getEdgeOptions()));
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
+
+			break;
+
+		case "firefox":
+			try {
+				tlDriver.set(
+						new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.getFirefoxOptions()));
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
+
+			break;
+
+		default:
+			System.out.println("This browser is not supported on Selenium Grid " + browserName);
+			throw new BrowserException("====== INVALID BROWSER =====");
+
+		}
+
+	}
+
 	/**
 	 * getDriver: get the local thready copy of the driver
 	 */
-	
+
 	public static WebDriver getDriver() {
 		return tlDriver.get();
 	}
-	
-	
 
 	public Properties getProperties() {
 		String envName = System.getProperty("env");
@@ -94,7 +155,7 @@ public class DriverFactory {
 			}
 
 			else {
-				System.out.println("Evironment Seleted: "+envName);
+				System.out.println("Evironment Seleted: " + envName);
 				switch (envName.toLowerCase().trim()) {
 				case "qa":
 					ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
@@ -128,7 +189,7 @@ public class DriverFactory {
 		return prop;
 
 	}
-	
+
 	/**
 	 * takescreenshot
 	 */

@@ -5,12 +5,59 @@
     <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
     <listener class-name="com.qa.opencart.listners.TestAllureListener"/>
   </listeners>
+  <test thread-count="4" parallel="tests" name="Search Page Test_chrome(failed)" verbose="4">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserversion" value="113.0"/>
+    <classes>
+      <class name="com.qa.opencart.tests.SearchTest">
+        <methods>
+          <include name="searchTest"/>
+          <include name="setUp"/>
+          <include name="accPageSetup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.SearchTest -->
+    </classes>
+  </test> <!-- Search Page Test_chrome(failed) -->
+  <test thread-count="4" parallel="tests" name="ProductInfo Page Test_chrome(failed)" verbose="4">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserversion" value="113.0"/>
+    <classes>
+      <class name="com.qa.opencart.tests.ProductInfoTest">
+        <methods>
+          <include name="productInfoSetup"/>
+          <include name="setUp"/>
+          <include name="getActualProductDetailsTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.ProductInfoTest -->
+    </classes>
+  </test> <!-- ProductInfo Page Test_chrome(failed) -->
+  <test thread-count="4" parallel="tests" name="Account Page Test_chrome(failed)" verbose="4">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserversion" value="123.0"/>
+    <classes>
+      <class name="com.qa.opencart.tests.AccountPageTest">
+        <methods>
+          <include name="accPageSetup"/>
+          <include name="setUp"/>
+          <include name="pageUrlTest"/>
+          <include name="pageTitleTest"/>
+          <include name="hearderCountTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.AccountPageTest -->
+    </classes>
+  </test> <!-- Account Page Test_chrome(failed) -->
   <test thread-count="4" parallel="tests" name="Login Page Test_chrome(failed)" verbose="4">
-    <parameter name="browser" value="edge"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserversion" value="126.0"/>
     <classes>
       <class name="com.qa.opencart.tests.LoginPageTest">
         <methods>
+          <include name="loginTest"/>
           <include name="pageTitleTest"/>
+          <include name="pageUrlTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
