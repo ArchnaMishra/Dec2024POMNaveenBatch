@@ -5,6 +5,7 @@ com\qa\opencart\pages\LoginPage.class
 comp\qa\oopencart\utils\CSVUtil.class
 comp\qa\oopencart\utils\JavaScriptUtil.class
 com\qa\opencart\errors\AppError.class
+com\qa\opencart\factory\OptionsManager.class
 com\qa\opencart\pages\ProductInfoPage.class
 com\qa\opencart\pages\SearchResultPage.class
 com\qa\oopencart\exceptions\FrameworkExceptions.class
@@ -13,3 +14,4 @@ comp\qa\oopencart\utils\ElementUtil.class
 comp\qa\oopencart\utils\TimeUtil.class
 com\qa\opencart\constants\AppConstants.class
 com\qa\opencart\pages\RegistrationPage.class
+com\qa\opencart\listners\TestAllureListener.class
